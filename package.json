@@ -1,7 +1,7 @@
 {
   "name": "base-kit",
+  "description": "This is a react component library, we can use it like a complete UI framework.",
   "version": "0.1.0",
-  "private": true,
   "type": "module",
   "files": [
     "dist"
