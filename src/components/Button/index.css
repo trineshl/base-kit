@@ -1,0 +1,9 @@
+.bk-button {
+  border: none;
+  padding: 10px;
+  cursor: pointer
+}
+
+.bk-button:hover {
+  opacity: 0.9;
+}

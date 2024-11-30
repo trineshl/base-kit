@@ -1,0 +1,9 @@
+:root {
+  --bk-primary: #089cff;
+  --bk-primary-text: white;
+}
+
+.bk-primary {
+  background-color: var(--bk-primary);
+  color: var(--bk-primary-text);
+}

@@ -2,25 +2,36 @@
   "name": "base-kit",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
+  "files": [
+    "dist"
+  ],
   "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "clsx": "^2.1.1"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.8.1",
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "test": "react-scripts test"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "moduleNameMapper": {
+      "\\.(css|less|sass|scss)$": "identity-obj-proxy"
+    }
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "plugin:storybook/recommended"
     ]
   },
   "browserslist": {
@@ -34,5 +45,33 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.25.9",
+    "@chromatic-com/storybook": "^3.2.2",
+    "@rollup/plugin-commonjs": "^28.0.1",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@storybook/addon-essentials": "^8.4.6",
+    "@storybook/addon-interactions": "^8.4.6",
+    "@storybook/addon-onboarding": "^8.4.6",
+    "@storybook/blocks": "^8.4.6",
+    "@storybook/react": "^8.4.6",
+    "@storybook/react-vite": "^8.4.6",
+    "@storybook/test": "^8.4.6",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "eslint-plugin-storybook": "^0.11.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.5.1",
+    "prop-types": "^15.8.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-scripts": "5.0.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "storybook": "^8.4.6",
+    "web-vitals": "^2.1.4",
+    "@rollup/plugin-babel": "^6.0.4"
   }
 }
