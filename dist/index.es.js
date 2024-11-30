@@ -36,10 +36,10 @@ function styleInject(css, ref) {
   }
 }
 
-var css_248z$2 = ":root {\r\n  --bk-primary: #089cff;\r\n  --bk-primary-text: white;\r\n}\r\n\r\n.bk-primary {\r\n  background-color: var(--bk-primary);\r\n  color: var(--bk-primary-text);\r\n}";
+var css_248z$2 = ":root {\r\n  --ubk-primary: #089cff;\r\n  --ubk-primary-text: white;\r\n}\r\n\r\n.bk-primary {\r\n  background-color: var(--ubk-primary);\r\n  color: var(--ubk-primary-text);\r\n}";
 styleInject(css_248z$2);
 
-var css_248z$1 = ".bk-button {\r\n  border: none;\r\n  padding: 10px;\r\n  cursor: pointer\r\n}\r\n\r\n.bk-button:hover {\r\n  opacity: 0.9;\r\n}";
+var css_248z$1 = ".ubk-button {\r\n  border: none;\r\n  padding: 10px;\r\n  cursor: pointer\r\n}\r\n\r\n.ubk-button:hover {\r\n  opacity: 0.9;\r\n}";
 styleInject(css_248z$1);
 
 function r(e) {
@@ -67,7 +67,7 @@ const Button = _ref => {
   } = _ref;
   return /*#__PURE__*/React.createElement("button", _extends({
     onClick: onClick,
-    className: clsx("bk-button", {
+    className: clsx("ubk-button", {
       'bk-primary': isPrimary
     }, className)
   }, props), label);
@@ -79,7 +79,7 @@ Button.propTypes = {
   className: PropTypes.any
 };
 
-var css_248z = ".bk-link {\r\n  color: var(--bk-primary);\r\n  cursor: pointer;\r\n}\r\n.bk-link:hover {\r\n  text-decoration: underline;\r\n}";
+var css_248z = ".ubk-link {\r\n  color: var(--ubk-primary);\r\n  cursor: pointer;\r\n}\r\n.ubk-link:hover {\r\n  text-decoration: underline;\r\n}";
 styleInject(css_248z);
 
 const Link = _ref => {
@@ -90,7 +90,7 @@ const Link = _ref => {
   } = _ref;
   return /*#__PURE__*/React.createElement("a", _extends({
     onClick: onClick,
-    className: clsx('bk-link', props.className)
+    className: clsx('ubk-link', props.className)
   }, props), label);
 };
 Link.propTypes = {

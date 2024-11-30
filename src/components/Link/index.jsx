@@ -4,7 +4,7 @@ import "./index.css";
 import clsx from "clsx";
 
 export const Link = ({ label, onClick, ...props }) => (
-  <a onClick={onClick} className={clsx('bk-link', props.className)} {...props}>
+  <a onClick={onClick} className={clsx('ubk-link', props.className)} {...props}>
     {label}
   </a>
 );

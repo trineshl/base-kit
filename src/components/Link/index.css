@@ -1,7 +1,7 @@
-.bk-link {
-  color: var(--bk-primary);
+.ubk-link {
+  color: var(--ubk-primary);
   cursor: pointer;
 }
-.bk-link:hover {
+.ubk-link:hover {
   text-decoration: underline;
 }

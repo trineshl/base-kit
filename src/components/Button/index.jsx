@@ -7,7 +7,7 @@ import clsx from "clsx";
 export const Button = ({ label, onClick, isPrimary = false, className = '', ...props }) => (
   <button
     onClick={onClick}
-    className={clsx("bk-button", { 'bk-primary': isPrimary }, className)}
+    className={clsx("ubk-button", { 'bk-primary': isPrimary }, className)}
     {...props}>
     {label}
   </button>
