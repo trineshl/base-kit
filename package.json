@@ -3,6 +3,14 @@
   "description": "This is a react component library, we can use it like a complete UI framework.",
   "version": "0.1.0",
   "type": "module",
+  "main": "dist/index.es.js",
+  "module": "dist/index.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.es.js"
+    }
+  },
   "files": [
     "dist"
   ],
