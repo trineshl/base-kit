@@ -1,14 +1,14 @@
 import { fn } from '@storybook/test';
-import { Button } from './index';
-import { faSave, faUndo } from '@fortawesome/free-solid-svg-icons';
+import MenuButton from './index';
+import { faBaby, faNewspaper, faPen } from '@fortawesome/free-solid-svg-icons';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 export default {
-  title: 'Example/Button',
-  component: Button,
+  title: 'Example/Button/MenuButton',
+  component: MenuButton,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
-    layout: 'centered',
+    layout: 'centered'
   },
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
@@ -21,52 +21,30 @@ export default {
 };
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Primary = {
+export const MenuPrimary = {
   args: {
-    isPrimary: true,
-    label: 'Save and Continue',
-    icon: faSave,
+    btnProps: {
+      isPrimary: true,
+      label: 'Create new record using',
+      icon: faNewspaper
+    },
+    menuItems: [
+      { label: 'Form Item 1', icon: faBaby, id: 'item1', onClick: fn() },
+      { label: 'Form Item 2', icon: faPen, id: 'item2', onClick: fn() },
+    ]
   },
 };
 
-export const PrimaryLoading = {
+export const MenuOrdinary = {
   args: {
-    isPrimary: true,
-    label: 'Save and Continue',
-    icon: faSave,
-    loading: true,
+    btnProps: {
+      isPrimary: false,
+      label: 'Create new record using',
+      icon: faNewspaper
+    },
+    menuItems: [
+      { label: 'Form Item 1', icon: faBaby, id: 'item1', onClick: fn() },
+      { label: 'Form Item 2', icon: faPen, id: 'item2', onClick: fn() },
+    ]
   },
 };
-
-export const PrimaryDisabled = {
-  args: {
-    isPrimary: true,
-    label: 'Save and Continue',
-    icon: faSave,
-    disabled: true,
-  },
-};
-
-export const Ordinary = {
-  args: {
-    label: 'Cancel',
-    icon: faUndo
-  }
-};
-
-export const OrdinaryLoading = {
-  args: {
-    label: 'Cancel',
-    loading: true,
-    icon: faUndo,
-  }
-};
-
-export const OrdinaryDisabled = {
-  args: {
-    label: 'Cancel',
-    icon: faUndo,
-    disabled: true,
-  }
-};
-

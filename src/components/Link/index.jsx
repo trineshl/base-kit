@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./index.css";
+import "./index.scss";
 import clsx from "clsx";
 
 export const Link = ({ label, onClick, ...props }) => (
-  <a onClick={onClick} className={clsx('ubk-link', props.className)} {...props}>
+  <a onClick={onClick} {...props} className={clsx('ubk-link', props.className)}>
     {label}
   </a>
 );

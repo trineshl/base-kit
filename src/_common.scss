@@ -1,0 +1,22 @@
+$isDarkMode: false;
+
+$ubk-primary: #8b5cf6;
+$ubk-primary-text: if($isDarkMode, #000, #fff);
+$ubk-border: if($isDarkMode, #333, #ccc);
+$ubk-decent-shadow-color: rgba(0, 0, 0, 0.2);
+$ubk-hover-color: if($isDarkMode, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.05));
+
+.ubk-primary {
+  background-color: $ubk-primary;
+  color: $ubk-primary-text;
+}
+
+.ubk-primary-invert {
+  color: $ubk-primary;
+  background-color: $ubk-primary-text;
+}
+
+.ubk-disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}

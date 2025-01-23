@@ -1,7 +1,0 @@
-.ubk-link {
-  color: var(--ubk-primary);
-  cursor: pointer;
-}
-.ubk-link:hover {
-  text-decoration: underline;
-}

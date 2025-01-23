@@ -1,11 +1,13 @@
+import React from 'react';
 import { fn } from '@storybook/test';
-
-import { Link } from './index';
+import { Picker } from './index';
+import Button from '../Button/index';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 export default {
-  title: 'Example/Link',
-  component: Link,
+  title: 'Example/Picker',
+  component: Picker,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
     layout: 'centered',
@@ -18,8 +20,14 @@ export default {
 };
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const ALink = {
+export const PickerCs = {
   args: {
-    label: 'Learn More',
+    MainComponent: Button,
+    mainComponentProps: {
+      label: 'Picker Example',
+      rightIcon: faChevronDown,
+      rightIconProps: { size: 'sm' }
+    },
+    picker: 'Picker Content'
   }
 };

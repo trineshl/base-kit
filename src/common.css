@@ -1,9 +1,0 @@
-:root {
-  --ubk-primary: #089cff;
-  --ubk-primary-text: white;
-}
-
-.bk-primary {
-  background-color: var(--ubk-primary);
-  color: var(--ubk-primary-text);
-}

@@ -12,13 +12,13 @@ describe("Button Component", () => {
   test("applies the 'primary' class when isPrimary is true", () => {
     render(<Button label="Primary Button" isPrimary={true} />);
     const buttonElement = screen.getByText("Primary Button");
-    expect(buttonElement).toHaveClass("bk-primary");
+    expect(buttonElement).toHaveClass("ubk-primary");
   });
 
   test("does not apply the 'primary' class when isPrimary is false", () => {
     render(<Button label="Secondary Button" isPrimary={false} />);
     const buttonElement = screen.getByText("Secondary Button");
-    expect(buttonElement).not.toHaveClass("bk-primary");
+    expect(buttonElement).not.toHaveClass("ubk-primary");
   });
 
   test("calls onClick handler when clicked", () => {
@@ -45,6 +45,6 @@ describe("Button Component", () => {
     render(<Button label="Default Button" />);
     const buttonElement = screen.getByText("Default Button");
     expect(buttonElement).toBeInTheDocument();
-    expect(buttonElement).not.toHaveClass("bk-primary");
+    expect(buttonElement).not.toHaveClass("ubk-primary");
   });
 });

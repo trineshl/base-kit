@@ -1,0 +1,30 @@
+@use '../../_common.scss';
+
+.bk-spinner-container {
+  .bk-spinner {
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    border: 4px solid transparent;
+  }
+
+  .primary {
+    border-top: 5px solid common.$ubk-primary;
+    border-left: 5px solid common.$ubk-primary;
+  }
+
+  .primary-invert {
+    border-top: 5px solid common.$ubk-primary-text;
+    border-left: 5px solid common.$ubk-primary-text;
+  }
+
+  /* Keyframes for spinning effect */
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

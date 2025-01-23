@@ -36,10 +36,10 @@ function styleInject(css, ref) {
   }
 }
 
-var css_248z$2 = ":root {\r\n  --ubk-primary: #089cff;\r\n  --ubk-primary-text: white;\r\n}\r\n\r\n.bk-primary {\r\n  background-color: var(--ubk-primary);\r\n  color: var(--ubk-primary-text);\r\n}";
+var css_248z$2 = ":root {\r\n  --ubk-primary: #144eec;\r\n  --ubk-primary-text: white;\r\n}\r\n\r\n.ubk-primary {\r\n  background-color: var(--ubk-primary);\r\n  color: var(--ubk-primary-text);\r\n}\r\n\r\n.ubk-primary-invert {\r\n  color: var(--ubk-primary);\r\n  background-color: var(--ubk-primary-text);\r\n}";
 styleInject(css_248z$2);
 
-var css_248z$1 = ".ubk-button {\r\n  border: none;\r\n  padding: 10px;\r\n  cursor: pointer\r\n}\r\n\r\n.ubk-button:hover {\r\n  opacity: 0.9;\r\n}";
+var css_248z$1 = ".ubk-button {\r\n  border: none;\r\n  padding: 10px;\r\n  cursor: pointer;\r\n  border-radius: 5px;\r\n}\r\n\r\n.ubk-button:hover {\r\n  opacity: 0.9;\r\n}\r\n\r\n.ubk-ordinary {\r\n  border: 1px solid;\r\n}";
 styleInject(css_248z$1);
 
 function r(e) {
@@ -68,7 +68,9 @@ const Button = _ref => {
   return /*#__PURE__*/React.createElement("button", _extends({
     onClick: onClick,
     className: clsx("ubk-button", {
-      'bk-primary': isPrimary
+      'ubk-primary': isPrimary
+    }, {
+      'ubk-primary-invert ubk-ordinary': !isPrimary
     }, className)
   }, props), label);
 };

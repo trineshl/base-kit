@@ -1,0 +1,34 @@
+.ubk-button-container {
+  .ubk-button {
+    border: none;
+    padding: 8px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: opacity 0.1s;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  .ubk-button-ordinary {
+    border: 1px solid;
+    transition: background-color 0.1s;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+  }
+
+  .ubk-button-loading {
+    cursor: wait;
+  }
+
+  .ubk-button-disabled {
+    cursor: not-allowed;
+  }
+}

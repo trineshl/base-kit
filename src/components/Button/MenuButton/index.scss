@@ -1,0 +1,16 @@
+@use '../../../_common.scss';
+
+.bk-menu-button {
+  .menu-item {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.1s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    &:hover {
+      background-color: common.$ubk-hover-color
+    }
+  }
+}

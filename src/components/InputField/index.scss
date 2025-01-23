@@ -1,0 +1,52 @@
+@use '../../_common.scss';
+
+.bk-text-field-container {
+
+  display: flex;
+  align-items: center;
+
+  &.top-align {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .label {
+    color: #333;
+    font-size: 0.9rem;
+  }
+
+  .label-left-align {
+    margin-right: 0.5rem;
+  }
+
+  .label-top-align {
+    margin-bottom: 0.1rem;
+  }
+
+  .text-field {
+    border: 1px solid common.$ubk-border;
+    border-radius: 4px;
+    padding: 4px;
+    flex: 1;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+    outline: none;
+
+    &:focus {
+      border-color: common.$ubk-primary;
+    }
+
+    &.error {
+      border-color: red;
+    }
+
+    &:disabled {
+      background-color: #f5f5f5;
+      cursor: not-allowed;
+    }
+
+    &.top-align {
+      width: 100%;
+    }
+  }
+}

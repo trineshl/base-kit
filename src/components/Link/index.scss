@@ -1,0 +1,10 @@
+@use '../../_common.scss';
+
+.ubk-link {
+  color: common.$ubk-primary;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
