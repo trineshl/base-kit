@@ -21,7 +21,10 @@ const config = {
       exclude: ["**/*.test.js", "**/*.test.js", "**/*.stories.js"]
     }),
     peerDepsExternal(),
-    postcss()
+    postcss({
+      extensions: ['.css', '.scss'],
+      extract: true, // Ensures styles are in a separate CSS file
+    }),
   ]
 };
 

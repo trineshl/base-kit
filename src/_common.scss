@@ -1,32 +1,32 @@
 $isDarkMode: false;
 
-$ubk-primary: #8b5cf6;
-$ubk-danger: #f44336;
+$bk-primary: #8b5cf6;
+$bk-danger: #f44336;
 
-$ubk-text: if($isDarkMode, #fff, #000);
-$ubk-background: if($isDarkMode, #000, #fff);
-$ubk-border: if($isDarkMode, #ccc, #ccc);
-$ubk-disabled-color: if($isDarkMode, #ccc, #666);
+$bk-text: if($isDarkMode, #fff, #000);
+$bk-background: if($isDarkMode, #000, #fff);
+$bk-border: if($isDarkMode, #ccc, #ccc);
+$bk-disabled-color: if($isDarkMode, #ccc, #f5f5f5);
 
-$ubk-decent-shadow-color: rgba(0, 0, 0, 0.2);
-$ubk-hover-color: if($isDarkMode, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.05));
+$bk-decent-shadow-color: rgba(0, 0, 0, 0.2);
+$bk-hover-color: if($isDarkMode, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.05));
 
 body {
   background-color: if($isDarkMode, #333333, #f5f5f5);
   color: if($isDarkMode, #fff, #333);
 }
 
-.ubk-primary {
-  background-color: $ubk-primary;
-  color: $ubk-background;
+.bk-primary {
+  background-color: $bk-primary;
+  color: $bk-background;
 }
 
-.ubk-primary-invert {
-  color: $ubk-primary;
-  background-color: $ubk-background;
+.bk-primary-invert {
+  color: $bk-primary;
+  background-color: $bk-background;
 }
 
-.ubk-disabled {
+.bk-disabled {
   opacity: 0.7;
   cursor: not-allowed;
 }

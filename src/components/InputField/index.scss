@@ -27,7 +27,7 @@
   }
 
   .text-field {
-    border: 1px solid common.$ubk-border;
+    border: 1px solid common.$bk-border;
     border-radius: 2px;
     padding: 4px;
     flex: 1;
@@ -35,19 +35,19 @@
     transition: border-color 0.3s;
     outline: none;
 
-    background-color: common.$ubk-background;
-    color: common.$ubk-text;
+    background-color: common.$bk-background;
+    color: common.$bk-text;
 
     &:focus {
-      border-color: common.$ubk-primary;
+      border-color: common.$bk-primary;
     }
 
     &.error {
-      border-color: common.$ubk-danger;
+      border-color: common.$bk-danger;
     }
 
     &:disabled {
-      background-color: common.$ubk-disabled-color;
+      background-color: common.$bk-disabled-color;
       cursor: not-allowed;
     }
 

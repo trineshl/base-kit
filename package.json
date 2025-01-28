@@ -83,6 +83,7 @@
     "react-scripts": "5.0.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
+    "sass": "^1.83.4",
     "sass-embedded": "^1.83.1",
     "storybook": "^8.4.6",
     "web-vitals": "^2.1.4"

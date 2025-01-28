@@ -1,5 +1,5 @@
-.ubk-button-container {
-  .ubk-button {
+.bk-button-container {
+  .bk-button {
     border: 1px solid;
     padding: 8px 10px;
     cursor: pointer;
@@ -15,7 +15,7 @@
     }
   }
 
-  .ubk-button-ordinary {
+  .bk-button-ordinary {
     transition: background-color 0.1s;
 
     &:hover {
@@ -23,11 +23,11 @@
     }
   }
 
-  .ubk-button-loading {
+  .bk-button-loading {
     cursor: wait;
   }
 
-  .ubk-button-disabled {
+  .bk-button-disabled {
     cursor: not-allowed;
   }
 }

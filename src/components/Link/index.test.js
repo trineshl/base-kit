@@ -17,10 +17,10 @@ describe("Link Component", () => {
     expect(handleClick).toHaveBeenCalledTimes(1);
   });
 
-  test("renders with the default 'ubk-link' class", () => {
+  test("renders with the default 'bk-link' class", () => {
     render(<Link label="Default Link" />);
     const linkElement = screen.getByText("Default Link");
-    expect(linkElement).toHaveClass("ubk-link");
+    expect(linkElement).toHaveClass("bk-link");
   });
 
   test("applies additional className passed as props", () => {

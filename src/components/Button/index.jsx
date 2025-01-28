@@ -21,16 +21,16 @@ export const Button = ({ label, onClick, isPrimary = false, className = '',
 
   const isDisabled = disabled || loading;
 
-  return (<span className="ubk-button-container">
+  return (<span className="bk-button-container">
     <button
       onClick={onClick}
       disabled={isDisabled}
       {...props}
-      className={clsx("ubk-button", {
-        'ubk-primary': isPrimary,
-        'ubk-primary-invert ubk-button-ordinary': !isPrimary,
-        'ubk-button-loading': loading,
-        'ubk-disabled ubk-button-disabled': disabled,
+      className={clsx("bk-button", {
+        'bk-primary': isPrimary,
+        'bk-primary-invert bk-button-ordinary': !isPrimary,
+        'bk-button-loading': loading,
+        'bk-disabled bk-button-disabled': disabled,
       }, className)}>
       {getIcon()}
       {label}
