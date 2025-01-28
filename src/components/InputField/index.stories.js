@@ -1,5 +1,6 @@
 import { fn } from '@storybook/test';
 import { InputField } from './index';
+import { faSearch } from '@fortawesome/free-solid-svg-icons/faSearch';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 export default {
@@ -30,6 +31,15 @@ export const TextFieldTopAlign = {
     labelAlign: 'top'
   }
 };
+
+export const DisabledTextField = {
+  args: {
+    fieldLabel: 'Disabled Field',
+    labelAlign: 'top',
+    inputFieldProps: { disabled: true }
+  }
+};
+
 export const TextFieldWithPlaceholder = {
   args: {
     fieldLabel: 'Label with Placeholder',
@@ -47,14 +57,6 @@ export const TextFieldWithCustomClass = {
   }
 };
 
-export const PasswordField = {
-  args: {
-    fieldLabel: 'Password Field',
-    labelAlign: 'top',
-    type: 'password'
-  }
-};
-
 export const EmailField = {
   args: {
     fieldLabel: 'Email Field',
@@ -68,5 +70,34 @@ export const CheckboxField = {
     fieldLabel: 'Checkbox Field',
     labelAlign: 'left',
     type: 'checkbox'
+  }
+};
+
+export const NumberField = {
+  args: {
+    fieldLabel: 'Number Field',
+    labelAlign: 'left',
+    type: 'number'
+  }
+};
+
+export const InputFieldWithTrigger = {
+  args: {
+    type: 'text',
+    inputFieldProps: { placeholder: 'Search text...' },
+    triggerConfig: {
+      icon: faSearch,
+      iconProps: { size: 'sm' },
+      onClick: fn(),
+      position: 'left'
+    }
+  }
+};
+
+export const DateField = {
+  args: {
+    type: 'date',
+    fieldLabel: 'Date Field',
+    labelAlign: 'left'
   }
 };

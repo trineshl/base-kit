@@ -5,7 +5,7 @@ import Button from '..';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const MenuButton = ({ btnProps, menuItems }) => {
+export const MenuButton = ({ btnProps, menuItems }) => {
   return (
     <div className='bk-menu-button'>
       <Picker

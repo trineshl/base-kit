@@ -11,7 +11,6 @@
   }
 
   .label {
-    color: #333;
     font-size: 0.9rem;
   }
 
@@ -23,30 +22,58 @@
     margin-bottom: 0.1rem;
   }
 
+  .input-field-container {
+    position: relative;
+  }
+
   .text-field {
     border: 1px solid common.$ubk-border;
-    border-radius: 4px;
+    border-radius: 2px;
     padding: 4px;
     flex: 1;
     box-sizing: border-box;
     transition: border-color 0.3s;
     outline: none;
 
+    background-color: common.$ubk-background;
+    color: common.$ubk-text;
+
     &:focus {
       border-color: common.$ubk-primary;
     }
 
     &.error {
-      border-color: red;
+      border-color: common.$ubk-danger;
     }
 
     &:disabled {
-      background-color: #f5f5f5;
+      background-color: common.$ubk-disabled-color;
       cursor: not-allowed;
     }
 
     &.top-align {
       width: 100%;
+    }
+  }
+
+  .input-field-cls-if-trigger-if-left {
+    padding-left: 30px;
+  }
+
+  .input-field-cls-if-trigger-if-right {
+    padding-right: 30px;
+  }
+
+  .triggerIconCls {
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+    &.right {
+      right: 10px;
+      left: unset;
     }
   }
 }

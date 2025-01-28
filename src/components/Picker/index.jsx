@@ -20,12 +20,15 @@ export const Picker = ({ MainComponent, mainComponentProps, picker, pickerProps 
   return (
     <div ref={pickerRef} className="bk-picker-container">
       {<MainComponent
-        onClick={() => setOpen(!open)}
         {...mainComponentProps}
+        onClick={() => {
+          if (mainComponentProps?.onClick && mainComponentProps.onClick() === false) return;
+          setOpen(!open);
+        }}
       />}
       {open && <div className={clsx('picker')}
         {...pickerProps}
-        style={{ width: pickerRef.current?.offsetWidth, ...pickerProps?.style }}
+        style={{ width: (pickerRef.current?.offsetWidth - 2), ...pickerProps?.style }}
       >
         {picker}
       </div>}

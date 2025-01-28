@@ -1,6 +1,6 @@
 .ubk-button-container {
   .ubk-button {
-    border: none;
+    border: 1px solid;
     padding: 8px 10px;
     cursor: pointer;
     border-radius: 5px;
@@ -16,7 +16,6 @@
   }
 
   .ubk-button-ordinary {
-    border: 1px solid;
     transition: background-color 0.1s;
 
     &:hover {
