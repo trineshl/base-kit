@@ -5,7 +5,7 @@ $bk-danger: #f44336;
 
 $bk-text: if($isDarkMode, #fff, #000);
 $bk-background: if($isDarkMode, #000, #fff);
-$bk-border: if($isDarkMode, #ccc, #ccc);
+$bk-border: if($isDarkMode, #e0e0e0, #e0e0e0);
 $bk-disabled-color: if($isDarkMode, #ccc, #f5f5f5);
 
 $bk-decent-shadow-color: rgba(0, 0, 0, 0.2);

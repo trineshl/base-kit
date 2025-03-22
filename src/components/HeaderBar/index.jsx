@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { memo } from 'react';
 
-export const HeaderBar = () => {
+const HeaderBar = () => {
   return (
     <div>index</div>
   )
 }
 
-export default HeaderBar;
+export default memo(HeaderBar);

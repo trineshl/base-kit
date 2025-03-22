@@ -1,11 +1,11 @@
-import React from "react";
+import React, { memo } from "react";
 import PropTypes from "prop-types";
 import "./index.scss";
 import clsx from "clsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Spinner from "../Spinner";
 
-export const Button = ({ label, onClick, isPrimary = false, className = '',
+const Button = ({ label, onClick, isPrimary = false, className = '',
   icon, iconProps = {}, rightIcon, rightIconProps = {}, loading, disabled, ...props }) => {
 
   const getIcon = () => {
@@ -46,4 +46,4 @@ Button.propTypes = {
   className: PropTypes.any
 };
 
-export default Button;
+export default memo(Button);

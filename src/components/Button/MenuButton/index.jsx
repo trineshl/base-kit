@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { memo } from 'react';
 import './index.scss';
 import Picker from '../../Picker';
 import Button from '..';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export const MenuButton = ({ btnProps, menuItems }) => {
+const MenuButton = ({ btnProps, menuItems }) => {
   return (
     <div className='bk-menu-button'>
       <Picker
@@ -30,4 +30,4 @@ export const MenuButton = ({ btnProps, menuItems }) => {
   )
 }
 
-export default MenuButton;
+export default memo(MenuButton);

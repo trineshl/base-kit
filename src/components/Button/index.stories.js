@@ -1,5 +1,5 @@
 import { fn } from '@storybook/test';
-import { Button } from './index';
+import Button from './index';
 import { faSave, faUndo } from '@fortawesome/free-solid-svg-icons';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export

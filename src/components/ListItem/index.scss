@@ -1,0 +1,27 @@
+@use '../../_common.scss';
+
+.list-item {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-bottom: 1px solid common.$bk-border;
+  cursor: pointer;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .list-item-icon {
+    margin-right: 10px;
+  }
+
+  &:hover {
+    background-color: #fafafa;
+  }
+
+  .list-item-help-text {
+    display: block;
+    font-size: small;
+    color: #666;
+  }
+}

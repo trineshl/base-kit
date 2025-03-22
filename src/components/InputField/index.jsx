@@ -1,4 +1,4 @@
-import React, { useImperativeHandle, useRef } from 'react';
+import React, { memo, useImperativeHandle, useRef } from 'react';
 import './index.scss';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
@@ -6,16 +6,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const generateUniqueId = () => `text-field-${Math.random().toString(36).substr(2, 9)}`;
 
-export const InputField = ({
+const InputField = ({
   type = 'text',
   fieldLabel,
   labelAlign = 'top', //it can be top or left
-  inputFieldProps = {},
   labelProps = {},
   ref,
   triggerConfig = null,
+  inputFieldProps = {},
+  inputFieldContainerProps = {},
+  inputFieldContainerChildren,
   onClick = () => { }
 }) => {
+
   const uniqueId = useRef(generateUniqueId()).current;
   const isLblTopAligned = labelAlign === 'top';
   const inputRef = useRef(null);
@@ -27,7 +30,7 @@ export const InputField = ({
         inputFieldRef.current.focus();
       }
     };
-  }, []);
+  }, [inputFieldRef]);
 
   return (
     <div onClick={onClick} className={clsx('bk-text-field-container', {
@@ -38,7 +41,7 @@ export const InputField = ({
         className={clsx('label', (isLblTopAligned ? 'label-top-align' : 'label-left-align'), labelProps.className)}>
         {fieldLabel}{!isLblTopAligned && ':'}
       </label>}
-      <span className='input-field-container'>
+      <span className='input-field-container' {...inputFieldContainerProps}>
         <input ref={inputFieldRef} type={type} id={uniqueId}
           {...inputFieldProps}
           className={clsx('text-field', {
@@ -56,6 +59,7 @@ export const InputField = ({
             })}
           />
         )}
+        {inputFieldContainerChildren}
       </span>
     </div>
   );
@@ -75,4 +79,4 @@ InputField.propTypes = {
   })
 };
 
-export default InputField;
+export default memo(InputField);

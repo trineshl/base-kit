@@ -1,10 +1,11 @@
 import { fn } from '@storybook/test';
-import SensitiveField from './index';
+import ListItem from './index';
+import { faUser } from '@fortawesome/free-solid-svg-icons/faUser';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 export default {
-  title: 'Example/InputField/SensitiveField',
-  component: SensitiveField,
+  title: 'Example/ListItem',
+  component: ListItem,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
     layout: 'centered',
@@ -16,22 +17,18 @@ export default {
   args: { onClick: fn() },
 };
 
-export const SensitiveInputField = {
+// More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
+
+export const ListItemWithText = {
   args: {
-    fieldLabel: 'Sensitive Field',
-    labelAlign: 'left'
+    text: 'Hey there!'
   }
 };
 
-// export const SensitiveDateField = {
-//   args: {
-//     type: 'date',
-//     fieldLabel: 'Date Field',
-//     labelAlign: 'left',
-//     inputFieldProps: {
-//       style: {
-//         width: 200
-//       }
-//     }
-//   }
-// };
+export const ListItemWithIcon = {
+  args: {
+    icon: faUser,
+    text: 'Hey there!', 
+    helpText: 'Some random text',
+  }
+};

@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { memo, useState } from 'react';
 import './index.scss';
 import InputField from '..';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
-export const SensitiveField = ({
+const SensitiveField = ({
   fieldType = 'text',
   defaultHidden = true,
   ...props }) => {
@@ -23,4 +23,4 @@ export const SensitiveField = ({
   );
 };
 
-export default SensitiveField;
+export default memo(SensitiveField);

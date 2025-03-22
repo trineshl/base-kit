@@ -1,5 +1,5 @@
 import { fn } from '@storybook/test';
-import { InputField } from './index';
+import InputField from './index';
 import { faSearch } from '@fortawesome/free-solid-svg-icons/faSearch';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export

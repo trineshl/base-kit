@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import PropTypes from "prop-types";
 import "./index.scss";
 import clsx from "clsx";
@@ -22,4 +22,4 @@ Spinner.propTypes = {
   size: PropTypes.number,
 };
 
-export default Spinner;
+export default memo(Spinner);

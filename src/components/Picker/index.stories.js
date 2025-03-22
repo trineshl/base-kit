@@ -1,6 +1,6 @@
-import React from 'react';
+// import React from 'react';
 import { fn } from '@storybook/test';
-import { Picker } from './index';
+import Picker from './index';
 import Button from '../Button/index';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 

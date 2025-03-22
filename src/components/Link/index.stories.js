@@ -1,6 +1,6 @@
 import { fn } from '@storybook/test';
 
-import { Link } from './index';
+import Link from './index';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 export default {
