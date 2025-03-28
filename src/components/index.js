@@ -1,6 +1,6 @@
 export { default as MenuButton } from './Button/MenuButton';
 export { default as Button } from './Button';
-export { default as Header } from './HeaderBar'
+export { default as HeaderBar } from './HeaderBar'
 
 export { default as InputField } from './InputField';
 export { default as Combobox } from './InputField/Combobox';

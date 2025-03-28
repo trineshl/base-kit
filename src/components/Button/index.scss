@@ -10,6 +10,8 @@
     gap: 0.5rem;
     transition: opacity 0.1s;
 
+    font-family: inherit;
+
     &:hover {
       opacity: 0.9;
     }

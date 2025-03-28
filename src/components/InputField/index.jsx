@@ -41,7 +41,7 @@ const InputField = ({
         className={clsx('label', (isLblTopAligned ? 'label-top-align' : 'label-left-align'), labelProps.className)}>
         {fieldLabel}{!isLblTopAligned && ':'}
       </label>}
-      <span className='input-field-container' {...inputFieldContainerProps}>
+      <span {...inputFieldContainerProps} className={clsx('input-field-container', inputFieldContainerProps.className)}>
         <input ref={inputFieldRef} type={type} id={uniqueId}
           {...inputFieldProps}
           className={clsx('text-field', {

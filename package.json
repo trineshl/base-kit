@@ -1,7 +1,7 @@
 {
   "name": "ui-base-kit",
   "description": "This is a react component library, we can use it like a complete UI framework.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "main": "dist/index.es.js",
   "module": "dist/index.es.js",
@@ -30,6 +30,7 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
+    "dev-yalc": "concurrently \"rollup -c -w\" \"chokidar \\\"dist/**/*\\\" -d 300 -c \\\"yalc push\\\"\"",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "test": "react-scripts test"
@@ -75,6 +76,8 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "@testing-library/user-event": "^14.6.1",
+    "chokidar-cli": "^3.0.0",
+    "concurrently": "^9.1.2",
     "eslint-plugin-storybook": "^0.11.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.5.1",
